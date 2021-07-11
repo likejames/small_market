@@ -15,18 +15,8 @@
           </template>
         </el-menu-item>
       </el-menu>
-      <div class="block1">
-        <ul>
-          <li v-for="v in json.list">
-            <!--          <img v-bind:src="v.src" alt="">-->
-            <img src="../img/img.png">
-            <h4>{{v.des}}</h4>
-            <p>价格:{{v.price}}</p>
-          </li>
-        </ul>
-      </div>
-      <router-view/>
     </div>
+    <RouterView></RouterView>
   </div>
 </template>
 <script>
@@ -36,54 +26,20 @@ export default {
   components: {Header},
   data() {
     return {
-      json: {
-        list: [
-          {
-            src: '../img/img.png',
-            des: '这是第一个描述',
-            price: 198
-          },
-          {
-            src: '../img/img.png',
-            des: '这是第二个描述',
-            price: 198
-          },
-          {
-            src: './img/img.png',
-            des: '这是第三个描述',
-            price: 211
-          },
-          {
-            src: './img/img.png',
-            des: '这是第一个描述',
-            price: 198
-          },
-          {
-            src: './img/img.png',
-            des: '这是第二个描述',
-            price: 112
-          },
-          {
-            src: './img/img.png',
-            des: '这是第三个描述',
-            price: 423
-          }
-        ]
-      },
       navList: [
-        { name: "/test", navItem: "商品列表" },
-        { name: "/test1", navItem: "商城" }
+        { name: "/shopping", navItem: "热卖商品" },
+        { name: "/productin", navItem: "商品资讯" }
       ],
     }
-  }
+  },
+  methods: {
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
+    },
+  },
 }
 </script>
 <style>
-.block1 {
-  position: absolute;
-  top: 80px;
-  text-align: center;
-}
 .menu-style{
   position: absolute;
   top: 480px;
