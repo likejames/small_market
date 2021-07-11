@@ -3,10 +3,15 @@ import VueRouter from 'vue-router'
 import Commodity from "../views/Commodity";
 import Shopping from "../views/Shopping"
 import Productin from "../views/Productin"
+import test from "../views/test"
 
 Vue.use(VueRouter)
 //路由配置
-const routes = [
+const routes = [{
+    path: '',
+    name: 'Commodity',
+    component: Commodity,
+},
     {
         path: '/commodity',
         name: 'Commodity',
@@ -20,6 +25,11 @@ const routes = [
             name: 'Productin',
             component: Productin
         },]
+    },
+    {
+        path: '/test',
+        name: 'test',
+        component: test,
     }
 ]
 const router = new VueRouter({

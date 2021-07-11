@@ -11,6 +11,9 @@ Vue.use(Element)
 import axios from 'axios'
 Vue.prototype.$axios = axios
 
+import VueScroller from 'vue-scroller'
+Vue.use(VueScroller)
+
 new Vue({
   router,
   store,

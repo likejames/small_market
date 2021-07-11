@@ -24,7 +24,7 @@
 export default {
   data () {
     return {
-      count: 4,
+      count: 10,
       loading: false
     }
   },
@@ -40,7 +40,7 @@ export default {
     load () {
       this.loading = true
       setTimeout(() => {
-        this.count += 10
+        this.count += 2
         this.loading = false
       }, 2000)
     }
