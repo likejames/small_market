@@ -16,7 +16,12 @@ const routes = [{
         path: '/commodity',
         name: 'Commodity',
         component: Commodity,
-        children: [{
+        children: [
+            {
+                path: '/',
+                name: 'Index',
+                redirect:{name:"Shopping"} //重定向
+            },{
             path: '/shopping',
             name: 'Shopping',
             component: Shopping
