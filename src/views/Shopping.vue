@@ -1,6 +1,6 @@
 <template>
   <div class="infinite-list-wrapper">
-    <el-row>
+    <el-row class="el-body">
       <el-col :span="4" v-for="(item) in tabledata" :key="item.classId" :offset="1">
         <div style="margin-top:15px">
           <el-card :body-style="{ padding: '0px'}" shadow="hover">
@@ -17,19 +17,24 @@
         </div>
       </el-col>
     </el-row>
-    <div>
+    <div class="pagination">
       <el-pagination
           background
           layout="prev, pager, next"
           :total="1000">
       </el-pagination>
     </div>
+    <Law class="law-style"></Law>
   </div>
 </template>
 
 <script>
+import Law from "@/components/Law";
 
 export default {
+  components:{
+    Law
+  },
   name: "Shopping",
   data() {
     return {
@@ -111,5 +116,16 @@ export default {
   position: absolute;
   top: 600px;
   text-align: center;
+}
+.el-body{
+  background-color: lavenderblush;
+}
+.pagination{
+  position: relative;
+  top: 50px;
+}
+.law-style{
+  position: relative;
+  top: 100px;
 }
 </style>
