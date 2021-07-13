@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="head-style">
     <div>
       <el-avatar class="block" size="200" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
       <span class="span-text">小雨商城</span>
@@ -15,7 +15,7 @@
         <img src="../img/images/banner/banner_01.png" alt="">
       </el-carousel-item>
     </el-carousel>
-    <el-divider class="test1"><i class="el-icon-mobile-phone"></i></el-divider>
+    <el-divider class="icon-style"><i class="el-icon-mobile-phone"></i></el-divider>
   </div>
 </template>
 <script>
@@ -38,22 +38,26 @@ export default {
 
 .test {
   position: absolute;
-  top: 80px;
+  top: 90px;
 }
 .span-text{
   position: absolute;
   color: coral;
-  top: 20px;
+  top: 30px;
   left: 440px;
   font-size:20px
 }
 .block{
   position: absolute;
   left: 400px;
+  top: 20px;
 }
-.test1 {
+.icon-style {
   position: absolute;
   top: 100px;
   text-align: center;
+}
+.head-style{
+  background-color: dimgrey;
 }
 </style>
