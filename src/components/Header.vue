@@ -9,7 +9,7 @@
       <el-button type="danger" round class="el-button2">注册</el-button>
     </div>
     <span class="demonstration"></span>
-    <el-carousel height="300px" class="test">
+    <el-carousel height="300px" class="carousel">
       <el-carousel-item v-for="(item,i) in img_list" :key="i">
 <!--                <img :src="item"  style="width:100px; height:130px">-->
         <img src="../img/images/banner/banner_01.png" alt="">
@@ -36,7 +36,7 @@ export default {
   top: 20px;
 }
 
-.test {
+.carousel {
   position: absolute;
   top: 90px;
 }
