@@ -4,6 +4,7 @@ import Commodity from "../views/Commodity";
 import Shopping from "../views/Shopping"
 import Productin from "../views/Productin"
 import test from "../views/test"
+import AdminInfo from "../views/Admin/AdminInfo"
 
 Vue.use(VueRouter)
 //路由配置
@@ -35,6 +36,11 @@ const routes = [{
         path: '/test',
         name: 'test',
         component: test,
+    },
+    {
+        path: '/admin/Info',
+        name: 'AdminInfo',
+        component: AdminInfo,
     }
 ]
 const router = new VueRouter({

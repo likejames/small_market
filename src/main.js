@@ -14,6 +14,9 @@ Vue.prototype.$axios = axios
 import VueScroller from 'vue-scroller'
 Vue.use(VueScroller)
 
+//导入全局样式表
+import "./assets/css/global.css"
+
 new Vue({
   router,
   store,

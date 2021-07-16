@@ -5,6 +5,7 @@
       <span class="span-text">小雨商城</span>
     </div>
     <div class="button-style">
+      <el-button type="primary" round @click="returnAdmin">管理员</el-button>
       <el-button type="warning" round class="el-button1">登录</el-button>
       <el-button type="danger" round class="el-button2">注册</el-button>
     </div>
@@ -26,6 +27,12 @@ export default {
       //图片地址数组
       img_list: ["../img/images/banner/banner_01.png", "../img/images/banner/banner_02.png", "../img/images/banner/banner_03.png"]
     };
+  },
+  methods:{
+    returnAdmin(){
+      const _this = this
+      _this.$router.push("/admin/Info")
+    }
   }
 }
 </script>
@@ -33,7 +40,7 @@ export default {
 .button-style {
   position: absolute;
   right: 100px;
-  top: 20px;
+  top: 30px;
 }
 
 .carousel {
@@ -58,6 +65,5 @@ export default {
   text-align: center;
 }
 .head-style{
-  background-color: dimgrey;
 }
 </style>
