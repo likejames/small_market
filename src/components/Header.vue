@@ -31,7 +31,7 @@ export default {
   methods:{
     returnAdmin(){
       const _this = this
-      _this.$router.push("/admin/Info")
+      _this.$router.push("/admin")
     }
   }
 }
