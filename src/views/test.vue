@@ -97,10 +97,6 @@ export default {
     };
   },
   methods: {
-    mounted() {
-      console.log("开始了")
-      window.addEventListener("scroll", this.handleScroll, true);
-    },
     handleScroll () {
       let scrollTop =
           document.documentElement.scrollTop || document.body.scrollTop // 变量windowHeight是可视区的高度
@@ -117,12 +113,14 @@ export default {
         return false
       }
     },
-    destroyed () {
-      window.removeEventListener('scroll', this.handleScroll)
-    },
   },
-  created() {
-    this.mounted()
-  }
+  mounted() {
+    console.log("开始了")
+    window.addEventListener("scroll", this.handleScroll, true);
+  },
+  destroyed () {
+    console.log("取消了")
+    window.removeEventListener('scroll', this.handleScroll,true)
+  },
 }
 </script>
