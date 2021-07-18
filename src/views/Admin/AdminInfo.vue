@@ -11,14 +11,18 @@
             @close="handleClose"
             background-color="gray"
             text-color="#fff"
-            active-text-color="#ffd04b" :unique-opened="true" :collapse=collapse :collapse-transition="false" router>
+            active-text-color="#ffd04b"
+            :unique-opened="true"
+            :collapse=collapse
+            :collapse-transition="false"
+            router>
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
               <span>导航一</span>
             </template>
               <el-menu-item index="/editShopping">商品编辑</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
+              <el-menu-item index="/shoppingShow">商品展览</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">
@@ -76,6 +80,9 @@ export default {
   methods:{
     changeCode(){
       this.collapse=!this.collapse
+    },
+    saveCode(){
+      window
     }
   }
 }

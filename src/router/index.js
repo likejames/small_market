@@ -6,6 +6,9 @@ import Productin from "../views/Productin"
 import test from "../views/test"
 import AdminInfo from "../views/Admin/AdminInfo"
 import EditShopping from "../views/Admin/EditShopping"
+import Welecome from "../views/Admin/Welecome"
+
+import ShoppingShow from "../views/Admin/ShoppingShow"
 Vue.use(VueRouter)
 //路由配置
 const routes = [{
@@ -42,10 +45,20 @@ const routes = [{
         name: 'AdminInfo',
         component: AdminInfo,
         children: [
+            {
+                path: '/admin',
+                name: 'Welecome',
+                component:Welecome //重定向
+            },
            {
                 path: '/editShopping',
                 name: 'EditShopping',
                 component: EditShopping
+            },
+            {
+                path: '/shoppingShow',
+                name: 'ShoppingShow',
+                component: ShoppingShow
             }]
     }
 ]
