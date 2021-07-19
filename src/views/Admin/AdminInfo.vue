@@ -1,6 +1,8 @@
 <template>
   <el-container class="container-style">
-    <el-header>Header</el-header>
+    <el-header>
+      <h1>欢迎来到小雨商场后台</h1>
+    </el-header>
     <el-container>
       <el-aside :width="collapse ? '64px' :'200px' ">
         <div class="toggle-style" @click="changeCode">|||</div>
@@ -95,6 +97,9 @@ export default {
 
 .el-aside{
   background-color: gray;
+}
+.el-menu{
+  border-right:none;
 }
 .el-main{
   background-color: white;
