@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/admin' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item>商品展示</el-breadcrumb-item>
     </el-breadcrumb>
     <el-card class="box-card">
@@ -56,7 +56,7 @@
               <el-button type="warning" icon="el-icon-edit"></el-button>
             </el-tooltip>
             <el-tooltip class="item" effect="dark" content="分享" placement="top">
-              <el-button type="primary" icon="el-icon-share"></el-button>
+              <el-button type="primary" icon="el-icon-share" @click="enjony"></el-button>
             </el-tooltip>
             <el-tooltip class="item" effect="dark" content="删除" placement="top">
               <el-button type="danger" icon="el-icon-delete"></el-button>
@@ -132,6 +132,10 @@ export default {
     },
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`);
+    },
+    enjony(){
+      const _this = this
+      _this.$router.push("/testxx")
     }
   }
 }
